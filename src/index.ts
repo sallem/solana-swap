@@ -43,7 +43,7 @@ export class SolanaSwap {
       amount: amount.toString(),
       slippage: slippage.toString(),
     });
-    const url = `${this.baseUrl}/rate?${params}`;
+    const url = `${this.baseUrl}/quote?${params}`;
     try {
       const response = await axios.get(url);
       return response.data as QuoteResponse | ErrorResponse;
